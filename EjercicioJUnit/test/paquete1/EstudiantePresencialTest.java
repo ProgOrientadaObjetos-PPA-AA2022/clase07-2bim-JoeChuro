@@ -128,7 +128,10 @@ public class EstudiantePresencialTest {
     @Test
     public void testObtenerMatriculaPresencial() {
         System.out.println("obtenerMatriculaPresencial");
-        double expResult = 0.0;
+         instance.establecerCostoCredito(1.0);
+        instance.establecerNumeroCreditos(5);
+        instance.calcularMatriculaPresencial();
+        double expResult = 5.0;
         double result = instance.obtenerMatriculaPresencial();
         assertEquals(expResult, result, 0.0);
         // TODO review the generated test code and remove the default call to fail.
